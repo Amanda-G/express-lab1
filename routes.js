@@ -48,7 +48,7 @@ cart.get(`${cartEndpointURI}/:id`, (req, res) => {
         res.json(cartItem)
     } else {
         res.status(404)
-        res.json("ID Not Found")
+        res.send("ID Not Found")
     }
 })
 
@@ -76,7 +76,7 @@ cart.put(`${cartEndpointURI}/:id`, (req, res) => {
         res.json(updatedItem);
     } else {
         res.status(404);
-        res.json(`nothing at this id`);
+        res.send(`nothing at this id`);
     }
 })
 
@@ -91,7 +91,7 @@ cart.delete(`${cartEndpointURI}/:id`, (req, res) => {
         res.json(cartItems);
     } else {
         res.status(404);
-        res.json(`nothing at this id`);
+        res.send(`nothing at this id`);
     }
 })
 
